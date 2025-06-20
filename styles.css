@@ -30,12 +30,30 @@
     border-radius: 1.5rem;
 }
 
+.name-bio{
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 3px #DADADA;
+}
+     
+ 
+
 .name{
+    font-family: 'Inter', sans-serif;
     font-size:22px;
     font-weight: bold;
     color: #000;
     text-align: left;
     margin-bottom: 16px;
+}
+
+.bio{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    max-width: 32.5rem;
+    text-align: left;
 }
 
 .row2{
@@ -81,4 +99,17 @@
     gap: 1rem;
     background-color: #FAF9F6;
     margin: 1rem;
+}
+
+@media (max-width: 640px) {
+    .row1{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 1.5rem;
+    }
 }
