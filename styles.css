@@ -112,4 +112,13 @@
         height: 6rem;
         border-radius: 1.5rem;
     }
+
+    .name{
+        font-size: 1.125rem;
+    }
+
+    .bio{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
 }
