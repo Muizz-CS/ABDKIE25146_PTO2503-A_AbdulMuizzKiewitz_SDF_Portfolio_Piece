@@ -6,15 +6,25 @@
 
 .bgcontainer{
     display: flex;
-    background-color: lightgray;
+    justify-content: center;
+    background-color: #837E7C;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-.grid{
-    flex: 1;
-    width: 100%;
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    justify-content: center;
+.grid {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  padding-right: 10rem;
+  padding-left: 10rem; /* Adjusted for scrollbar */
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 2rem;
+  max-width: 100%;/* or use gap: 2rem if no col setup */
 }
 
 .row1 {
@@ -86,6 +96,30 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+@media (max-width: 640px) {
+    .row1 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-pic{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 1.5rem;
+    }
+
+    .name{
+        font-size: 1.125rem;
+    }
+
+    .bio{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    }
 
 .row2{
     display: grid;
@@ -247,7 +281,7 @@
 
 .coming-soon {
     width: 15rem;
-    height: 22.5rem;
+    min-height: 22.5rem;
     border-radius: 0.75rem;
     background-color: #F0F0F0;
     color: #9B9B9B;
@@ -270,6 +304,29 @@
   margin-bottom: 0.5rem;
   color: inherit;
 }
+@media (max-width: 640px) {
+
+ .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-rows: repeat(2, auto);  /* 2 rows, height auto */
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-items: stretch; /* stretch items to fill grid cells */
+  }
+
+  .pfp,
+  .bspark,
+  .coming-soon {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
 
 .row4{
     display: grid;
@@ -294,7 +351,7 @@
 
 .education article {
     width: 100%;          
-    height: 10rem;          
+    min-height: 10rem;          
     border-radius: 0.75rem;   
     box-shadow: 0 0 2px #DADADA;
     background: #f9f9f9;
@@ -376,7 +433,34 @@
   text-align: left;
 }
 
+@media (max-width: 640px) {
+  .education {
+    padding: 0.75rem;
+    gap: 0.75rem; /* 12px spacing */
+  }
 
+  .education article {
+    width: 100%;
+    height: auto;
+    padding: 0.75rem;
+  }
+
+  .education h3 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .education h4,
+  .education p,
+  .education li {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1.125rem;
+  }
+
+  .education article.highlighted .badge {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+  }
+}
 
 .tools{
     background-color: #FFFFFF;
@@ -409,7 +493,7 @@
 
 .tool-group p {
   font-weight: 700;
-  font-size: 0.5rem;         
+  font-size: 0.75rem;         
   margin-bottom: 0.75rem;
   color: #FFFFFF;              
   background-color: #4A4A4A;  
@@ -444,6 +528,16 @@
   min-width: 1.5rem;   
 }
 
+@media (max-width: 640px) {
+  .tools {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+  
+  .tool-group {
+    padding: 0.5rem 0;
+  }
+}
+
 .row5 {
   width: 100%;
   display: flex;
@@ -468,8 +562,8 @@
 
 .experience-card {
   width: 100%;
-  max-width: 90rem;       /
-  height: 10rem;              
+  max-width: 90rem;       
+  min-height: 10rem;              
   background-color: #f9f9f9;
   border-radius: 0.75rem;   
   box-shadow: 0 0 0.125rem #DADADA;
@@ -564,35 +658,53 @@
   letter-spacing: 0.05em;
 }
 
-.row6{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1rem;
-    background-color: #FAF9F6;
-    margin: 1rem;
+.row6 {
+  width: 100%;
+}
+
+.row6 footer {
+  width: 100%;
+  background-color: #FF4500;
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem 0.75rem 0 0; /* rounded top corners only */
+  box-shadow: 0 0 6px rgba(218, 218, 218, 0.7);
+  font-family: 'Inter', sans-serif;
+  color: #4A4A4A;
+  text-align: left;
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+
+.row6 footer h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.row6 footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.row6 footer ul li {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
 }
 
 @media (max-width: 640px) {
-    .row1 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .profile-pic{
-        width: 6rem;
-        height: 6rem;
-        border-radius: 1.5rem;
-    }
-
-    .name{
-        font-size: 1.125rem;
-    }
-
-    .bio{
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-    }
-
+  .grid {
+    align-items: stretch;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;;
+  }
+ .experience-details p {
+    max-height: 150px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
 }
