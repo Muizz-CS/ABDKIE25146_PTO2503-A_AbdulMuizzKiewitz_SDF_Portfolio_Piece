@@ -45,7 +45,6 @@
 .name-bio{
     background-color: #FFFFFF;
     padding: 1rem;
-    border-radius: 0.75rem;
     box-shadow: 0 0 3px #DADADA;
     height: 9rem;
     width: 100%;
@@ -54,8 +53,21 @@
     overflow-y: auto;
     text-overflow: ellipsis;
     box-sizing: border-box;
+    border-radius: 0.75rem;
 }
-     
+
+.name-bio::-webkit-scrollbar {
+  width: 8px;
+}
+
+.name-bio::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px; /* 🔁 Rounded scrollbar thumb */
+}
+
+.name-bio::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 .name{
     font-family: 'Inter', sans-serif;
