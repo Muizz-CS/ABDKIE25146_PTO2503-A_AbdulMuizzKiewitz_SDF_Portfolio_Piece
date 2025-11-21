@@ -2,4 +2,6 @@
 
 Below is the link for my video presentation. I've had fun while doing this project and learnt a lot about my limitations and what I need to focus on.
 
-https://drive.google.com/drive/folders/1dh8E7EA23KvCJtaUDBxzdlRkAphkrC4P?usp=sharing
+https://drive.google.com/file/d/1IhRPUxFB_ns0GqnspY4lh6jh1VxNXYFH/view?usp=sharing
+
+Please note that I have no access to a video camera on my device at this moment. 
